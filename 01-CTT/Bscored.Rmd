@@ -1,0 +1,51 @@
+---
+title: "Test"
+author: "Margaret"
+date: "6 March 2018"
+output: 
+  html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+##Introduction
+This is a test of *English as Second Language* for Grade 7 students. This is a pilot test for the purpose of evaluating test items for their psychometric properties so that a final test form can be constructed based on the results of this pilot test. 
+
+In total, `r nrow(resp)` students took the test. 
+
+<!--- These are for html output file --->
+<style type="text/css">
+.table {
+    width: 40%;
+}
+</style>
+<center>
+
+
+##Classical Test Theory Item Statistics
+```{r results = 'asis', echo=FALSE, warning=FALSE}
+discA <- as.integer(disc*100+0.5)  #these lines are for adding "*" and fixing two decimal places.
+discB <- round(disc,2)
+discB[(discA%%10)==0] <- paste(discB[(discA%%10)==0],"0",sep='')
+discB[disc<0.2] <- paste("*",discB[disc<0.2],sep='')
+itemstats <- data.frame(round(itemdiff,2),discB)
+colnames(itemstats) <- c("Difficulty (%correct)","Discrimination(CTT)")
+```
+##Item difficulty and discrimination 
+```{r echo=FALSE, comment=NA, warning=FALSE}
+#itemstats
+kable(itemstats,align = 'cc')
+
+```
+
+
+##Plot of Item 7 score and total score
+```{r echo=FALSE, comment=NA, warning=FALSE}
+plot(score-resp[,7],resp[,7], xlab="test score",ylab = "item 7")
+
+ 
+```
+
+
