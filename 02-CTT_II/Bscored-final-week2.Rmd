@@ -1,0 +1,56 @@
+---
+title: "Week 2"
+author: "Mark Dulhunty"
+date: "13 March 2018"
+output: 
+  html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This Rmarkdown document is an extension of the exercise in week 1. It includes the use of the `CTT` package for calculation of item discrimination and reliability. This was the recommended code for class
+
+```{r in_class_code}
+# Week 1 
+# Calculate item discrimination and item difficulty.
+resp <- read.csv(here::here("01-CTT", "Bscored.csv"), stringsAsFactors = FALSE)
+score <- apply(resp, 1, sum, na.rm = TRUE)
+itemdiff <- apply(resp, 2, mean, na.rm = TRUE) / apply(resp, 2, max, na.rm = TRUE)
+disc <- apply(resp, 2, function(x) { cor(x, score - x, use = "complete.obs")})
+
+# Week 2 
+# Use the CTT package to calculate reliability (and other things)
+library(CTT)
+CTTstats <- CTT::reliability(resp)
+
+plot(CTTstats$pBis, disc)
+```
+
+The code above works but use of `CTT::reliability(resp)` gave us some messages. It is suggested we might be better off using `CTT::itemAnalysis()` instead. Side note: the `CTT::` prefix tells us that the `itemAnalysis()` function we want to use is the one from the `CTT` (this is not mandatory but can be useful if you are using packages containing the same function names). So let's try updating our `CTTstats` object using that instead.
+
+```{r ctt_itemanalysis}
+CTTstats <- CTT::itemAnalysis(resp)
+```
+
+Also notice our estimates of item discrimination in `disc` when plotted against `CTTstats$pBis` don't match up as nicely as we might expect.  Hmmmmm - why?? Let's take a look at the `CTT::reliability` code to see how it works:
+
+```{r reliability_fn_code}
+CTT::reliability  # note there is no use of brackets here
+```
+
+One thing to notice is the use of `na.omit` which removes cases which have missing values. If we do `na.omit(resp)` we have `r nrow(na.omit(resp))` rows. But the scores we calculated in `score` contains `r length(score)` scores of which there are `r sum(is.na(score))` missing values. 
+
+```{r update_scores}
+score <- apply(resp, 1, sum)  # na.rm is now default (FALSE)
+disc <- apply(resp, 2, function(x) { cor(x, score - x, use = "complete.obs")})
+```
+
+`score` now contains `r length(score)` scores of which there are `r sum(is.na(score))` missing values. Let's compare our results again. 
+
+```{r check_plot}
+plot(CTTstats$itemReport$pBis, disc)  
+```
+
+Note that we now need to use `CTTstats$itemReport$pBis` instead of `CTTstats$pBis` as the `itemAnalysis()` function has changed the way results are stored. Reliability for the test was `r round(CTTstats$alpha, 2)`.
