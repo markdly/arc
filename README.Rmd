@@ -1,19 +1,24 @@
-General
-================
-markdly
-14 March 2018
+---
+title: "General"
+author: "markdly"
+date: "14 March 2018"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 These are course notes and materials for ![img](workshop-flyer.png)
 
-structure
----------
+## structure
 
-Each week a new folder is added containing materials relevant to that week.
+Each week a new folder is added containing materials relevant to that week. 
 
-downloading course materials
-----------------------------
+## downloading course materials
 
-``` r
+```{r downloading, eval=FALSE}
+
 library(tidyverse)
 library(rvest)
 www <- "http://edmeasurementsurveys.com/MelbSD/"
@@ -25,3 +30,4 @@ docs <- read_html(www) %>%
 
 download.file(paste0(www, docs), here::here("temp_downloads", docs), method = "libcurl", mode = "wb")
 ```
+
