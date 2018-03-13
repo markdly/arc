@@ -1,0 +1,22 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Some comments about Reliability from class
+
+Assume an infinite pool of mathematics items where a student, Barry, can achieve a true score of 60% correct. If we give 40 questions from the infinite pool we would expect Barry to obtain an observed score of 24/40 in general but this will vary from test to test. Difference between observed score and the 'true' score is error.
+
+Reliability is the correlation between students' scores on two "parallel" (similar) tests. e.g. reliability of 0.8 means the correlation between two similar tests is 0.8.
+
+Reliability is not same as measurement error although measurement error plays a part (along with some other things).
+
+For a group of students with similar ability, reliability will be low for a short test for example.  The same test for a group of students which have a wide variation in ability will have higher ability.
+
+Margaret likes to think of reliability as how well a test separates students. Affected by two things:
+
+* Range of student ability. 
+* Measurement error.
+
+How to compute reliability in practice? Pretend our existing test is actually two tests (except an issue is the change in test length - see [Spearman-Brown prophecy formula](https://en.wikipedia.org/wiki/Spearman%E2%80%93Brown_prediction_formula) to predict reliability for a test length 2*n when we only have n items). A common way is to calculate Cronbachs alpha which is a conservative (lower bound) estimate (see slide definition). 
+
