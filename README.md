@@ -8,7 +8,9 @@ These are course notes and materials for ![img](workshop-flyer.png)
 structure
 ---------
 
-Each week a new folder is added containing materials relevant to that week.
+Each week a new folder and webpage is added containing materials relevant to that week. 
+
+The worked examples can be viewed at https://markdly.github.io/arc/
 
 downloading course materials
 ----------------------------
