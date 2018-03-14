@@ -1,0 +1,14 @@
+---
+output: html_document
+---
+
+# MGSE UniMelb CTT and IRT course worked examples
+#### Some (roughly!) worked examples and notes.
+
+<br>
+![course-flyer](workshop-flyer.png)
+<br>
+
+
+Source files available at https://github.com/markdly/arc.  
+
