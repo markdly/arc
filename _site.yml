@@ -5,10 +5,22 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Week 01: CTT"
+    - text: "01: CTT I"
       href: week01.html
-    - text: "Week 02: CTT continued..."
+    - text: "02: CTT II"
       href: week02.html
+    - text: "03: R markdown"
+      menu:
+        - text: "Main"
+          href: week03.html
+        - text: "---------"
+        - text: "Examples"
+        - text: "Example Slides"
+          href: week03-slides.html
+        - text: "Minimal Example"
+          href: week03-minimal.html
+        - text: "Short Example"
+          href: week03-short-example.html
 output:
   html_document:
     theme: flatly

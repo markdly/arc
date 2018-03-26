@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # lines starting with a '#' are comments
 
 # import the csv data.
-resp <- read.csv("Bscored.csv", stringsAsFactors = FALSE)
+resp <- read.csv(here::here("01-CTT", "Bscored.csv"), stringsAsFactors = FALSE)
 
 # calculate the score for each student (each row)
 score <- apply(resp, 1, sum, na.rm = TRUE)

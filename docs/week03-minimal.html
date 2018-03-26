@@ -13,13 +13,13 @@
 
 <title></title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap/shim/respond.min.js"></script>
+<script src="site_libs/navigation/tabsets.js"></script>
 
 
 
@@ -164,10 +164,33 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="week01.html">Week 01: CTT</a>
+  <a href="week01.html">01: CTT I</a>
 </li>
 <li>
-  <a href="week02.html">Week 02: CTT continued...</a>
+  <a href="week02.html">02: CTT II</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    03: R markdown
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="week03.html">Main</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Examples</li>
+    <li>
+      <a href="week03-slides.html">Example Slides</a>
+    </li>
+    <li>
+      <a href="week03-minimal.html">Minimal Example</a>
+    </li>
+    <li>
+      <a href="week03-short-example.html">Short Example</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -185,13 +208,92 @@ $(document).ready(function () {
 </div>
 
 
-<div id="mgse-unimelb-ctt-and-irt-course-worked-examples" class="section level1">
-<h1>MGSE UniMelb CTT and IRT course worked examples</h1>
-<div id="some-roughly-worked-examples-and-notes." class="section level4">
-<h4>Some (roughly!) worked examples and notes.</h4>
-<p><br> <img src="workshop-flyer.png" alt="course-flyer" /> <br></p>
-<p>Source files available at <a href="https://github.com/markdly/arc" class="uri">https://github.com/markdly/arc</a>.</p>
-</div>
+<div id="example" class="section level1">
+<h1>Example</h1>
+<p>The folowing table contains a sample of 10 rows from the inbuilt <code>iris</code> dataset.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.5</td>
+<td align="right">1.6</td>
+<td align="right">0.6</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">7.7</td>
+<td align="right">3.8</td>
+<td align="right">6.7</td>
+<td align="right">2.2</td>
+<td align="left">virginica</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">2.0</td>
+<td align="right">3.5</td>
+<td align="right">1.0</td>
+<td align="left">versicolor</td>
+</tr>
+<tr class="even">
+<td align="right">7.2</td>
+<td align="right">3.0</td>
+<td align="right">5.8</td>
+<td align="right">1.6</td>
+<td align="left">virginica</td>
+</tr>
+<tr class="odd">
+<td align="right">6.4</td>
+<td align="right">3.1</td>
+<td align="right">5.5</td>
+<td align="right">1.8</td>
+<td align="left">virginica</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.4</td>
+<td align="right">1.4</td>
+<td align="right">0.3</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">6.8</td>
+<td align="right">2.8</td>
+<td align="right">4.8</td>
+<td align="right">1.4</td>
+<td align="left">versicolor</td>
+</tr>
+<tr class="even">
+<td align="right">6.1</td>
+<td align="right">3.0</td>
+<td align="right">4.9</td>
+<td align="right">1.8</td>
+<td align="left">virginica</td>
+</tr>
+<tr class="odd">
+<td align="right">6.0</td>
+<td align="right">2.9</td>
+<td align="right">4.5</td>
+<td align="right">1.5</td>
+<td align="left">versicolor</td>
+</tr>
+<tr class="even">
+<td align="right">5.6</td>
+<td align="right">2.9</td>
+<td align="right">3.6</td>
+<td align="right">1.3</td>
+<td align="left">versicolor</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
