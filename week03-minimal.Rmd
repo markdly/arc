@@ -1,0 +1,16 @@
+---
+output: html_document
+---
+
+```{r echo=FALSE}
+n <- 10
+```
+
+# Example
+
+The folowing table contains a sample of `r n` rows from the inbuilt `iris` dataset.
+
+```{r echo=FALSE}
+set.seed(123)
+knitr::kable(iris[sample(nrow(iris), n), ], row.names = FALSE)
+```

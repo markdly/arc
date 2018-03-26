@@ -1,0 +1,17 @@
+---
+title: "Week 3 review"
+author: "Mark Dulhunty"
+date: "26 March 2018"
+output: html_document
+---
+
+## Week 3 review
+
+In week 3 we had an impromptu session about R markdown which is the document format being used for in class exercises.
+
+Before attempting to use R markdown you should ensure you have installed an up to date version of R <https://cran.ms.unimelb.edu.au/> and an up to date version of RStudio (see <https://www.rstudio.com/products/rstudio/download/>)
+
+A good place to start learning about R markdown is the official website at <http://rmarkdown.rstudio.com>.  [This section on R markdown](http://r4ds.had.co.nz/r-markdown.html#introduction-18) in Hadley Wickam's R for Data Science book may also be helpful.
+
+In class we have seen examples of using R markdown to produce static html documents. Some other examples have been added to the down menu for week 03 on the [website](https://markdly.github.io/arc/). The files that can be viewed on the website were all created using R markdown. The source R markdown files (i.e., files ending in `.Rmd`) can be viewed and downloaded from the [github repository where the website files are stored](https://github.com/markdly/arc).
+

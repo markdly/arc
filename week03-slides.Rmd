@@ -1,0 +1,125 @@
+---
+title: "R markdown"
+date: "2018-03-21"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: inverse, center, middle
+
+# R markdown
+
+*Author PDF, Word files, slides and more*
+
+---
+
+# Why use it?
+
+--
+
+### communicating 
+
+--
+
+### collaborating
+
+--
+
+### environment
+
+---
+
+# What is it? 
+
+## rmarkdown -> knitr -> markdown -> pandoc -> ...
+
+## A minimal example (minimal.Rmd)
+
+---
+
+# Examples
+
+ - These slides!
+
+ - Smaller processing tasks (short-example.Rmd)
+ 
+ - Larger more involved reports (e.g. tech reports / thesis / publications) containing charts, tables, references
+ 
+ - Interactive reports https://github.com/LCisannoyed/ShinyExample
+ 
+ - Websites https://markdly.github.io/arc/
+ 
+ - ...
+
+---
+
+# Shiny 
+
+https://edmeasurement.shinyapps.io/dashboard/
+
+---
+
+# Content examples
+
+Adapted or taken from [**xaringan**](https://github.com/yihui/xaringan) default template
+
+---
+
+# Math Expressions
+
+You can use LaTeX for things like math expressions.  For example, this code:
+
+```
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+```
+
+Once rendered will display like this
+
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+
+---
+
+# R Code
+
+```{r comment='#'}
+set.seed(123)
+sample(LETTERS, 5)
+
+```
+
+---
+
+# R Plots
+
+```{r cars, fig.height=4, dev='svg'}
+plot(cars)
+```
+
+---
+
+# Tables you can navigate
+
+```{r eval=require('DT'), tidy=FALSE}
+DT::datatable(
+  head(iris, 10),
+  fillContainer = FALSE, options = list(pageLength = 5)
+)
+```
+
+---
+
+# References
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+Under the hood [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

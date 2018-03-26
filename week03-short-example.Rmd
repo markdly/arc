@@ -1,0 +1,39 @@
+---
+title: "short-report"
+author: "markdly"
+date: "21 March 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Short report example: Initial descriptive stats for an educational assessment dataset
+
+For this example we are going to use a dataset that comes with the `conquestr` package available on github. It can be installed as follows:
+
+```{r install_conquestr, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("markdly/conquestr")
+```
+
+After installing we can access the inbuilt data (alternatively you could read in a csv file here etc)
+```{r datasets}
+library(DT)
+library(conquestr)
+resp <- conquestr::short_test
+```
+
+Student responses to item are stored in `resp`. Here are the first 8 records:
+
+```{r resp_table, echo=FALSE}
+#knitr::kable(head(resp))
+DT::datatable(
+  head(resp, 8),
+  fillContainer = FALSE, options = list(pageLength = 5)
+)
+```
+
+There are a total of `r nrow(resp)` cases. 
+
